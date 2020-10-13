@@ -1,0 +1,1 @@
+Rails.application.config.action_dispatch.return_only_media_type_on_content_type = true
