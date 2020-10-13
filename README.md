@@ -1,24 +1,5 @@
-# README
+This is a demo app create in order to show an issue with rails 6.1alpha (and previous 6.x releases) with `action_dispatch.return_only_media_type_on_content_type`
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Start the app and `curl localhost:3000`. It will print the current value for `Rails.application.config.action_dispatch.return_only_media_type_on_content_type` which will be `true`.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Now, `curl -I localhost:3000`. Verify that the content type header still includes the charset information. This is wrong.
